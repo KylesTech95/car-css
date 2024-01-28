@@ -5,7 +5,7 @@
 }
 
 body{
-    background:#333;
+    background:#000;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -14,34 +14,58 @@ body{
     width:100%;
 }
 #car-container{
-    width:100%;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position:relative;
+    width:400px;
+
 }
 .section{
-    background:silver;
+    background:tan;
 }
+
 .roof{
     border-radius: 24px 12px 0 0;
 }
 .body{
     border-radius:12px;
     z-index:997;
+    height:60px;
+    width:400px;
+    transform:skew(.0013turn,-2deg)
 }
 .roof,.wheels{
     position:absolute;
     height:75px;
 }
-.roof{
+.r1{
     top:-50px;
-    width:200px;
+    width:210px;
+    background:tan;
+}
+
+.r2{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right:95px;
+    top:-40px;
+    width:208px;
+    transform:skew(.003turn,-1deg);
+    background-image: linear-gradient(90deg,rgba(63, 14, 47, 0.686),rgba(52, 6, 85, 0.759))
+}
+.divider{
+    transform:rotate(-2deg);
+    height:100%;
+    width:2.5px;
+    background:#000;
 }
 .wheels{
     padding: 0 1rem;
-    bottom:-25.5px;
+    bottom:-45px;
     opacity:.75;
     width: 400px;
     display:flex;
@@ -56,21 +80,18 @@ body{
     width:75px;
     position:relative;
     background:red;
-}
-.body{
-    height:75px;
-    width:400px;
-}
-.section{
-   border:3px solid purple; 
+    box-shadow:0 0 0 12px #333;
 }
 
+
+
 .rims{
-    height:100%;
+    height:85px;
     width:2px;
     background:#333;
     position:absolute;
-    left:32.5px
+    left:34.5px;
+    top:-2px;
 }
 .rims:nth-child(1){
     transform:rotate(90deg)
@@ -90,15 +111,15 @@ body{
     background:#fff;
     border-radius: 50%;
     position:absolute;
-    left:28px;  
+    left:29.5px;  
     bottom: 29px;
     z-index:999;
 }
 .forwards{
-    animation: rotateForwards 20s infinite;
+    animation: rotateForwards 5s infinite;
 }
 .reverse{
-    animation: rotateBack 20s infinite;
+    animation: rotateBack 5s infinite;
 }
 @keyframes rotateForwards{
     from{
