@@ -29,7 +29,7 @@ body{
 }
 .body{
     border-radius:12px;
-    z-index:998;
+    z-index:997;
 }
 .roof,.wheels{
     position:absolute;
@@ -47,13 +47,14 @@ body{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    z-index:999;
+    z-index:998;
     background:none;    
 }
 .w1,.w2{
     border-radius:50%;
     height:75px;
     width:75px;
+    position:relative;
     background:red;
 }
 .body{
@@ -62,4 +63,56 @@ body{
 }
 .section{
    border:3px solid purple; 
+}
+
+.rims{
+    height:100%;
+    width:2px;
+    background:#333;
+    position:absolute;
+    left:32.5px
+}
+.rims:nth-child(1){
+    transform:rotate(90deg)
+}
+.rims:nth-child(2){
+    transform:rotate(45deg)
+}
+.rims:nth-child(3){
+    transform:rotate(-45deg)
+}
+.rims:nth-child(4){
+    transform:rotate(-90deg)
+}
+.rim-mid{
+    height:12px;
+    width:12px;
+    background:#fff;
+    border-radius: 50%;
+    position:absolute;
+    left:28px;  
+    bottom: 29px;
+    z-index:999;
+}
+.forwards{
+    animation: rotateForwards 20s infinite;
+}
+.reverse{
+    animation: rotateBack 20s infinite;
+}
+@keyframes rotateForwards{
+    from{
+        transform:rotate(0)
+    }
+    to{
+        transform:rotate(-360deg)
+    }
+}
+@keyframes rotateBack{
+    from{
+        transform:rotate(0)
+    }
+    to{
+        transform:rotate(360deg)
+    }
 }
